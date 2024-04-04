@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_03_163418) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_03_165652) do
+  create_table "directors", force: :cascade do |t|
+    t.string "name"
+    t.string "nationality"
+    t.date "dob"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "genres", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
