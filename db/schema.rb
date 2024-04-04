@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_04_04_181543) do
+ActiveRecord::Schema[7.1].define(version: 2024_04_04_221120) do
   create_table "directors", force: :cascade do |t|
-    t.string "name"
-    t.string "nationality"
-    t.date "dob"
+    t.string "name", null: false
+    t.string "nationality", null: false
+    t.date "dob", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "genre_id", null: false
@@ -22,11 +22,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_04_181543) do
   end
 
   create_table "films", force: :cascade do |t|
-    t.string "title"
-    t.integer "year"
-    t.text "synopsis"
-    t.string "country"
-    t.integer "duration"
+    t.string "title", null: false
+    t.integer "year", null: false
+    t.text "synopsis", null: false
+    t.string "country", null: false
+    t.integer "duration", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "director_id", null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_04_181543) do
   end
 
   create_table "genres", force: :cascade do |t|
-    t.string "name"
+    t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
