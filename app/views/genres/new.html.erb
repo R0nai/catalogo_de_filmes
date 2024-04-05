@@ -1,0 +1,8 @@
+<h2>Add a new Genre</h2>
+
+<%= form_with model: @genre do | f |%>
+  <%= f.label 'Name' %>
+  <%= f.text_field :name %>
+
+    <%= f.submit 'Submit' %>
+<% end %>
