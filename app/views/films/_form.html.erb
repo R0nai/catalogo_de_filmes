@@ -1,0 +1,25 @@
+<%= form_with model: film do | f |%>
+  <%= f.label 'Title' %>
+  <%= f.text_field :title %>
+
+  <%= f.label 'Country' %>
+  <%= f.text_field :country %>
+
+  <%= f.label 'Year' %>
+  <%= f.number_field :year %>
+
+  <%= f.label 'Duration' %>
+  <%= f.number_field :duration %>
+
+  <%= f.label 'Synopsis' %>
+  <%= f.text_area :synopsis %>
+
+  <%= f.label 'Genre' %>
+  <%= f.collection_select :genre_id, Genre.all, :id, :name %>
+
+  <%= f.label 'Director' %>
+  <%= f.collection_select :director_id, Director.all, :id, :name %>
+
+
+  <%= f.submit 'Submit' %>
+<% end %>
