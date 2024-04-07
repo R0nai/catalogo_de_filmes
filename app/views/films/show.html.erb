@@ -4,8 +4,11 @@
 <p>Synopsis: <%=@film.synopsis%></p>
 <p>Country: <%=@film.country%></p>
 <p>Duration: <%=@film.duration%></p>
-
+<p>Director: <%=@film.director.name%></p>
+<p>Film Genre: <%=@film.genre.name%></p>
+<div>
 <%=link_to "Edit this film", edit_film_path %>
+</div>
 
 
 <a href="/">Back Home</a>

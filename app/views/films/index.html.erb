@@ -1,7 +1,14 @@
 <h2>Films</h2>
-<%= link_to "Add a new Film", new_film_path%>
+<div>
+  <%= link_to "Add a new Film", new_film_path%>
+</div>
+
 <% @films.each do |film|%>
-  <%= link_to film.title, film%>
+  <div>
+    <%= link_to "#{film.title} #{film.year}", film%>
+  </div>
+  
+  
 <% end %>
 
 <a href="/">Back Home</a>
