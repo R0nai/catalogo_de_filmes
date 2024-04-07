@@ -1,7 +1,14 @@
 <h2>Film Genres</h2>
+<div>
 <%= link_to "Add a new Genre", new_genre_path%>
-<% @genres.each do |genre|%>
-  <%= link_to genre.name , genre%>
-<% end %>
+</div>
 
-<a href="/">Back Home</a>
+<% @genres.each do |genre|%>
+  <div>
+    <%= link_to genre.name , genre%>
+  </div>
+  
+<% end %>
+<div>
+  <a href="/">Back Home</a>
+</div>

@@ -1,5 +1,13 @@
 <h2><%= @genre.name%></h2>
 
-<%=link_to "Edit this genre", edit_genre_path %>
+<h3>List of films in the <%= @genre.name%> genre</h3>
+
+<%@films.each do |film|%>
+  <%= link_to film.title, film_path%>
+<%end%>
+
+<div>
+  <%=link_to "Edit this genre", edit_genre_path %>
+</div>
 
 <a href="/">Back Home</a>
