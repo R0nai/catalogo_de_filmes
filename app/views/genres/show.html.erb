@@ -3,7 +3,9 @@
 <h3>List of films in the <%= @genre.name%> genre</h3>
 
 <%@films.each do |film|%>
-  <%= link_to film.title, film_path%>
+  <div>
+    <%= link_to film.title, film_path%>
+  </div>
 <%end%>
 
 <div>

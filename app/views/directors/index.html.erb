@@ -1,9 +1,14 @@
 <h2>Directors</h2>
+<div>
+  <%= link_to "Add a new Director", new_director_path%>
+</div>
 
-<%= link_to "Add a new Director", new_director_path%>
 
 <% @directors.each do |director|%>
-  <%= link_to director.name, director%>
+  <div>
+    <%= link_to director.name, director%>
+  </div>
 <% end %>
-
-<a href="/">Back Home</a>
+<div>
+  <a href="/">Back Home</a>
+</div>
