@@ -1,4 +1,5 @@
 class Film < ApplicationRecord
+    enum status: {upcoming: 0, released: 1 }
     belongs_to :genre
     belongs_to :director
 

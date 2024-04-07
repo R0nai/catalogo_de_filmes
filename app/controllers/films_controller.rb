@@ -19,7 +19,8 @@ class FilmsController < ApplicationController
       duration: params[:film][:duration],
       synopsis: params[:film][:synopsis],
       genre_id: params[:film][:genre_id],
-      director_id: params[:film][:director_id]
+      director_id: params[:film][:director_id],
+      status: params[:film][:status]
       )
 
     if @film.save
@@ -41,7 +42,8 @@ class FilmsController < ApplicationController
       duration: params[:film][:duration],
       synopsis: params[:film][:synopsis],
       genre_id: params[:film][:genre_id],
-      director_id: params[:film][:director_id]
+      director_id: params[:film][:director_id],
+      status: params[:film][:status]
     )
     return redirect_to film_path(@film.id)
     end
