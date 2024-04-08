@@ -20,6 +20,7 @@ class FilmsController < ApplicationController
       synopsis: params[:film][:synopsis],
       genre_id: params[:film][:genre_id],
       director_id: params[:film][:director_id],
+      image: params[:film][:image],
       status: params[:film][:status]
       )
 
@@ -43,6 +44,7 @@ class FilmsController < ApplicationController
       synopsis: params[:film][:synopsis],
       genre_id: params[:film][:genre_id],
       director_id: params[:film][:director_id],
+      image: params[:film][:image],
       status: params[:film][:status]
     )
     return redirect_to film_path(@film.id)

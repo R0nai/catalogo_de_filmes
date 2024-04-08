@@ -5,6 +5,8 @@
 
 <% @films.each do |film|%>
   <div>
+    <%= image_tag(film.image, width: "200" , height: "300")%>
+    <br>
     <%= link_to "#{film.title} #{film.year} - #{film.status.capitalize}", film%>
   </div>
   

@@ -29,6 +29,10 @@
     <%= f.collection_select :director_id, Director.all, :id, :name %>
   </div>
   <div>
+    <%= f.label 'Poster' %>
+    <%= f.file_field :image %>
+  </div>
+  <div>
     <%= f.label 'Status' %>
     <%= f.select :status, Film.statuses.keys.map {|status| [status.capitalize, status]} %>
   </div>

@@ -7,6 +7,8 @@
 <p>Director: <%=@film.director.name%></p>
 <p>Film Genre: <%=@film.genre.name%></p>
 <p>Status: <%=@film.status%></p>
+<%= image_tag(@film.image, width: "200" , height: "300")%>
+
 <div>
 <%=link_to "Edit this film", edit_film_path %>
 </div>
